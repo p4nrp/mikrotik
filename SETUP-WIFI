@@ -1,0 +1,2 @@
+/interface wireless
+set wlan2 mode=ap-bridge band=2.4ghz-b/g ssid=Mikrotik disabled=no
