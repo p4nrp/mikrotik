@@ -1,0 +1,18 @@
+Mikrotik: LAN Bridge
+
+
+  interface bridge add name=lanBridge
+  interface bridge port add bridge=lanBridge interface=ether8
+  interface bridge port add bridge=lanBridge interface=ether7
+  interface bridge port add bridge=lanBridge interface=ether6
+  
+atau
+
+  /interface bridge
+  add name=bridge1
+  /interface bridge port
+  add bridge=bridge1 interface=ether2
+  add bridge=bridge1 interface=ether3
+  add bridge=bridge1 interface=ether4
+  add bridge=bridge1 interface=ether5
+
