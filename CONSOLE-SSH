@@ -6,3 +6,8 @@ Edit
   sudo vi /etc/ssh/ssh_config
 
   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+  
+ssh ke Mikrotik
+
+  ssh -o KexAlgorithms=diffie-hellman-group14-sha1 -o HostKeyAlgorithms=+ssh-dss admin@192.168.88.1
+
