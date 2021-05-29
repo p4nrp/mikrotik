@@ -1,0 +1,36 @@
+Sumber: https://laksa19.github.io/
+
+MikroTik Hotspot Monitor adalah aplikasi berbasis web (MikroTik API PHP class) untuk membantu manajemen Hotspot MikroTik. Khususnya MikroTik yang tidak mendukung User Manager. Mikhmon bukan radius server, jadi tidak harus selalu aktif. Mikhmon dapat diaktifkan saat dibutuhkan atau sesuai kebutuhan. 
+
+Instalasi
+
+  sudo su
+  apt update
+  apt -y install curl git php
+
+  sudo su
+  cd /usr/local/src
+  curl -o install-mikhmon https://laksa19.github.io/install-mikhmon.txt
+
+Edit
+
+  nano install-mikhmon
+
+Pastikan
+
+  #bin/bash
+  #pkg install git php -y
+
+
+  chmod +x install-mikhmon
+  ./install-mikhmon
+  
+Penggunaan
+
+  http://localhost:8080
+  http://ip-address:8080
+
+  username mikhmon
+  password 1234
+  
+
