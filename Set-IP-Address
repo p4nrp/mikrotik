@@ -1,0 +1,9 @@
+Cek IP address
+
+  ip address print
+  
+Add IP statik
+
+  ip address add interface=etherX address=XXX.XXX.XXX.XXX/24 - /24 adalah subnet 
+  ip address print
+
