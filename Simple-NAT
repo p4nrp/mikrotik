@@ -1,0 +1,4 @@
+Mikrotik: NAT Sederhana
+
+  /ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade  
+  /ip firewall nat print
