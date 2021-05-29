@@ -1,0 +1,7 @@
+Mikrotik: DHCP Client
+
+
+  /ip dhcp-client add interface=ether3 disabled=no
+  /ip dhcp-client enable
+  /ip dhcp-client renew
+  /ip dhcp-client print
