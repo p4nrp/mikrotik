@@ -1,0 +1,37 @@
+Mengaktifkan Regex
+
+  /ip firewall layer7-protocol add regexp=^.*togel.* name=togel
+  /ip firewall layer7-protocol add regexp=^.*porn.* name=porn
+  /ip firewall layer7-protocol print
+
+  /ip firewall filter add chain=forward layer7-protocol=porn action=drop
+  /ip firewall filter add chain=forward layer7-protocol=togel action=drop
+
+Contoh
+
+  /ip firewall layer7-protocol
+  add name=rdp regexp="rdpdr.*cliprdr.*rdpsnd"
+
+  /ip firewall filter
+  # add few known protocols to reduce mem usage
+  add action=accept chain=forward comment="" disabled=no port=80 protocol=tcp
+  add action=accept chain=forward comment="" disabled=no port=443 protocol=tcp
+  # add l7 matcher
+  add action=accept chain=forward comment="" disabled=no layer7-protocol=\
+    rdp protocol=tcp
+    
+Contoh Telnet Matcher
+
+  /ip firewall layer7-protocol add comment="" name=telnet regexp="^\\xff[\\xfb-\\xfe].\\xff[\\xfb-\\xfe].\\xff[\\xfb-\\xfe]"
+
+  /ip firewall filter
+  add action=accept chain=input comment="" disabled=no layer7-protocol=telnet \
+   protocol=tcp
+  add action=passthrough chain=output comment="" disabled=no layer7-protocol=telnet \
+   protocol=tcp
+
+Contoh Youtube Matcher
+
+  /ip firewall layer7-protocol
+  add name=youtube regexp="(GET \\/videoplayback\\\?|GET \\/crossdomain\\.xml)"
+
